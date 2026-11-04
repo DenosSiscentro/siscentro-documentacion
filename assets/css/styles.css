@@ -1,0 +1,396 @@
+
+/* =========================================
+   SIScentro - Centro de ayuda
+   Hoja de estilos principal
+========================================= */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #17365d;
+  --primary-light: #eff6ff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --background: #f8fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --success: #15803d;
+  --radius: 14px;
+  --shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CABECERA */
+
+.topbar {
+  width: 100%;
+  min-height: 76px;
+  padding: 15px max(5%, calc((100% - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  color: var(--primary-dark);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  font-weight: 400;
+}
+
+.help-label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PORTADA */
+
+.hero {
+  background: linear-gradient(135deg, #17365d, #2563eb);
+  color: var(--white);
+  text-align: center;
+  padding: 85px 20px 90px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+  color: #bfdbfe;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 10px 0 15px;
+  font-weight: 800;
+}
+
+.hero > p {
+  color: #dbeafe;
+  margin: 0;
+  font-size: 17px;
+}
+
+/* BUSCADOR */
+
+.search-box {
+  width: 100%;
+  max-width: 620px;
+  height: 62px;
+  margin: 35px auto 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.search-box span {
+  color: var(--muted);
+  font-size: 28px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.search-feedback {
+  min-height: 20px;
+  margin-top: 12px !important;
+  font-size: 13px;
+  color: #dbeafe;
+}
+
+/* CONTENIDO */
+
+.content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 25px 85px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  margin: 0 0 8px;
+  font-size: 29px;
+  color: var(--text);
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* TARJETAS */
+
+.manual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.manual-card {
+  display: block;
+  padding: 35px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.11);
+  border-color: #bfdbfe;
+}
+
+.card-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+  background: var(--primary-light);
+  border-radius: 14px;
+  font-size: 30px;
+}
+
+.card-tag {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.manual-card h3 {
+  margin: 10px 0;
+  font-size: 23px;
+  color: var(--text);
+}
+
+.manual-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 75px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card-link span {
+  margin-left: 6px;
+}
+
+/* AVISO */
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 45px;
+  padding: 25px;
+  background: var(--primary-light);
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  color: var(--primary-dark);
+}
+
+.notice > span {
+  font-size: 23px;
+}
+
+.notice strong {
+  font-size: 15px;
+}
+
+.notice p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* BÚSQUEDA SIN RESULTADOS */
+
+.no-results {
+  grid-column: 1 / -1;
+  padding: 35px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+  width: 100%;
+  min-height: 80px;
+  padding: 25px max(5%, calc((100% - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--primary-dark);
+  font-size: 17px;
+}
+
+/* PÁGINAS INTERIORES */
+
+.content h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 5px 0 12px;
+  color: var(--primary-dark);
+}
+
+.content > p {
+  color: var(--muted);
+}
+
+.content h2 {
+  margin-top: 40px;
+}
+
+/* ELEMENTOS OCULTOS */
+
+[hidden] {
+  display: none !important;
+}
+
+/* TABLETS Y MÓVILES */
+
+@media (max-width: 700px) {
+
+  .topbar {
+    min-height: 65px;
+    padding: 12px 20px;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero > p {
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 45px 18px 60px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .manual-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .manual-card {
+    padding: 26px;
+  }
+
+  .manual-card p {
+    min-height: auto;
+  }
+
+  .notice {
+    padding: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .help-label {
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .search-box {
+    height: 55px;
+    padding: 0 12px;
+  }
+}
+

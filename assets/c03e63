@@ -1,0 +1,301 @@
+  --navy-dark: #172f4c;
+             2633;
+  --muted: #687386;
+  --background: #f6f8fb;
+  --border: #e4e8ee;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter,  font-family: Inter,  font-family: Inter, UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  height: 76px;
+  padding: 0 max(6%, calc((100% - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--navy);
+}
+
+.brand span {
+  font-weight: 500;
+}
+
+.help-label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero {
+  background: var(--navy-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 76px 20px 85px;
+}
+
+.eyebrow {
+  color: #b9d0e9;
+  font-s  f: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.2;
+  margin: 18px 0 12px;
+}
+
+.hero > p {
+  color: #d1dceb;
+  margin: 0;
+}
+
+.search-box {
+  max-width: 590px;
+  margin: 32px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 0 18px;
+  height: 58px;
+  box-shadow: 0 8px 25px #00000020;
+}
+
+.search-box span {
+  font-size: 30px;
+}
+
+.search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  color: var(--text);
+  background: transparent;
+}
+
+.search-feedback {
+  min-height: 20px;
+  font-size: 13px;
+  margin-top: 10px !important;
+}
+
+.content {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 24px 75px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 27px;
+  margin: 0 0 5px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.manual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.manual-card {
+  background: var(--white);
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.manual-card:hover {
+  transform: translateY(-4px);
+  border-color: #b5c8dc;
+  box-shadow: 0 12px 30px #203e6312;
+}
+
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.card-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #53769a;
+}
+
+.manual-card h3 {
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.manual-card p {
+  color: var(--muted);
+  min-height: 52px;
+  font-size: 14px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card-link span {
+  margin-left: 5px;
+}
+
+.notice {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 45px;
+  padding: 22px;
+  background: #edf3f9;
+  border-radius: 10px;
+  color: var(--navy);
+}
+
+.notice > span {
+  font-size: 22px;
+}
+
+.notice p {
+  color: var(--muted);
+  margin: 3px 0 0;
+  font-size: 14px;
+}
+
+.no-results {
+  color: var(--muted);
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px max(6%, calc((100% - 1120px) / 2));
+  background: white;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--navy);
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding: 55px 20px 60px;
+  }
+
+  .content {
+    padding: 45px 18px;
+  }
+
+  .manual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-card p {
+    min-height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 22px;
+  }
+}
+EOF
+
+cat > assets/js/app.js <<'EOF'
+const searchInput = document.querySelector("#searchInput");
+const manualGrid = document.querySelector("#manualGrid");
+const searchFeedback = document.querySelector("#searchFeedback");
+
+if (searchInput && manualGrid) {
+  const cards = [...manualGrid.querySelectorAll(".manual-card")];
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLocaleLowerCase("es");
+    let visible = 0;
+
+    cards.forEach(card => {
+      const content = (
+        card.innerText + " " + card.dataset.search
+      ).toLocaleLowerCase("es");
+
+      const matches = content.includes(query);
+      card.hidden = !matches;
+
+      if (matches) visible++;
+    });
+
+    let message = manualGrid.querySelector(".no-results");
+
+    if (visible === 0) {
+      if (!message) {
+        message = document.createElement("p");
+        message.className = "no-results";
+        message.textContent = "No hemos encontrado resultados. Prueba con otras palabras.";
+        manualGrid.appendChild(message);
+      }
+    } else if (message) {
+      message.remove();
+    }
+
+    searchFeedback.textContent = query
+      ? `${visible} manuales encontrados`
+      : "";
+  });
+}
+EOF
+
+
