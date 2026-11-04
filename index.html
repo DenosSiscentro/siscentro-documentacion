@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Centro de ayuda oficial de Siscentro. Manuales y guías para trabajadores y administradores.">
+
+    <meta name="theme-color" content="#2563EB">
+
+    <title>Centro de ayuda | Siscentro</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            SIS<span>centro</span>
+        </a>
+
+        <span class="help-label">Centro de ayuda</span>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <span class="eyebrow">AYUDA Y DOCUMENTACIÓN</span>
+
+            <h1>¿En qué podemos ayudarte?</h1>
+
+            <p>
+                Encuentra instrucciones y aprende a utilizar Siscentro
+                paso a paso.
+            </p>
+
+            <div class="search-box">
+                <span>⌕</span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Buscar fichajes, correcciones, historial..."
+                    aria-label="Buscar en los manuales"
+                >
+            </div>
+
+            <p
+                class="search-feedback"
+                id="searchFeedback"
+                aria-live="polite">
+            </p>
+        </section>
+
+        <section class="content">
+
+            <div class="section-heading">
+                <h2>Selecciona tu manual</h2>
+
+                <p>
+                    Consulta las instrucciones según tu perfil de usuario.
+                </p>
+            </div>
+
+            <div class="manual-grid" id="manualGrid">
+
+                <a
+                    class="manual-card"
+                    href="trabajador/index.html"
+                    data-search="trabajador empleado fichar entrada salida historial correcciones móvil">
+
+                    <div class="card-icon">👤</div>
+
+                    <span class="card-tag">
+                        MANUAL DE USUARIO
+                    </span>
+
+                    <h3>Manual del trabajador</h3>
+
+                    <p>
+                        Aprende a registrar tu jornada, consultar tus
+                        fichajes y solicitar correcciones.
+                    </p>
+
+                    <span class="card-link">
+                        Consultar manual →
+                    </span>
+                </a>
+
+                <a
+                    class="manual-card"
+                    href="administrador/index.html"
+                    data-search="administrador empresa trabajadores gestión fichajes informes configuración">
+
+                    <div class="card-icon">🏢</div>
+
+                    <span class="card-tag">
+                        GESTIÓN DE EMPRESA
+                    </span>
+
+                    <h3>Manual del administrador</h3>
+
+                    <p>
+                        Consulta las instrucciones para gestionar los
+                        trabajadores y supervisar los fichajes.
+                    </p>
+
+                    <span class="card-link">
+                        Consultar manual →
+                    </span>
+                </a>
+
+            </div>
+
+            <section class="notice">
+                <span>ℹ️</span>
+
+                <div>
+                    <strong>¿Necesitas ayuda adicional?</strong>
+
+                    <p>
+                        Consulta con la persona responsable de Siscentro
+                        en tu empresa.
+                    </p>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <strong>SIScentro</strong>
+
+        <span>
+            Centro de ayuda · Documentación oficial
+        </span>
+    </footer>
+
+</body>
+</html>
+
