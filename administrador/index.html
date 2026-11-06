@@ -4,88 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manual de administración de Siscentro para empresas.">
-    <title>Manual del administrador | Siscentro</title>
+    <meta name="description" content="Manual de administración de Siscentro.">
+    <title>Manual de administración | Siscentro</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="../assets/js/app.js" defer></script>
 </head>
 <body>
 
-<header class="topbar">
-    <a href="../index.html" class="brand">SIS<span>centro</span></a>
-    <span class="help-label">Centro de ayuda</span>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="index.html">SIScentro</a>
+        <span class="header-label">Centro de ayuda</span>
+    </div>
 </header>
 
-<main>
-    <section class="hero">
-        <span class="eyebrow">GESTIÓN DE EMPRESA</span>
-        <h1>Manual del administrador</h1>
-        <p>Todo lo que necesitas saber para administrar tu empresa y supervisar el control horario de tus trabajadores.</p>
+<main class="content">
+
+    <section class="page-hero">
+        <span class="eyebrow">CENTRO DE AYUDA</span>
+        <h1>Manual de administración</h1>
+        <p>
+            Encuentra las instrucciones para gestionar tu empresa,
+            supervisar los fichajes y administrar a los trabajadores
+            desde Siscentro.
+        </p>
     </section>
 
-    <section class="content">
-
-        <p><a href="../index.html">← Volver al centro de ayuda</a></p>
-
+    <section class="manual-section">
         <div class="section-heading">
-            <h2>¿Qué necesitas hacer?</h2>
-            <p>Selecciona el apartado que quieras consultar.</p>
+            <h2>Guías de administración</h2>
+            <p>Selecciona el apartado que necesitas consultar.</p>
         </div>
 
         <div class="manual-grid" id="manualGrid">
 
-            <a class="manual-card"
-               href="panel-principal.html"
-               data-search="panel principal inicio verificación mensual indicadores actividad trabajadores fichajes horas incidencias">
-
+            <a class="manual-card" href="panel-principal.html"
+               data-search="dashboard panel principal inicio resumen indicadores actividad mensual">
                 <div class="card-icon">📊</div>
-
-                <span class="card-tag">INICIO</span>
-
+                <span class="card-tag">GENERAL</span>
                 <h3>Panel principal</h3>
-
                 <p>
-                    Consulta los indicadores generales, la verificación
-                    mensual y la actividad diaria de tu empresa.
+                    Conoce los indicadores, los resúmenes mensuales
+                    y la actividad diaria de tu empresa.
                 </p>
-
                 <span class="card-link">Consultar guía →</span>
             </a>
 
-            <a class="manual-card"
-               href="control-presencia.html"
-               data-search="control presencia fichajes jornadas calendario trabajadores entradas salidas nuevo fichaje modificar exportar">
-
-                <div class="card-icon">⏱️</div>
-
+            <a class="manual-card" href="control-presencia.html"
+               data-search="control presencia calendario jornadas fichajes trabajadores incidencias">
+                <div class="card-icon">📅</div>
                 <span class="card-tag">CONTROL HORARIO</span>
-
                 <h3>Control de presencia</h3>
-
                 <p>
-                    Consulta las jornadas de los trabajadores,
-                    revisa sus fichajes y gestiona solicitudes de nuevos registros.
+                    Consulta el calendario de jornadas, revisa los
+                    estados diarios y accede al detalle de los fichajes.
                 </p>
+                <span class="card-link">Consultar guía →</span>
+            </a>
 
+            <a class="manual-card" href="trabajadores.html"
+               data-search="trabajadores empleados altas bajas datos gestión personal">
+                <div class="card-icon">👥</div>
+                <span class="card-tag">PERSONAL</span>
+                <h3>Trabajadores</h3>
+                <p>
+                    Consulta cómo gestionar los trabajadores y su
+                    vinculación con el sistema de control horario.
+                </p>
+                <span class="card-link">Consultar guía →</span>
+            </a>
+
+            <a class="manual-card" href="correcciones.html"
+               data-search="correcciones solicitudes modificar cancelar fichajes historial">
+                <div class="card-icon">✏️</div>
+                <span class="card-tag">GESTIÓN</span>
+                <h3>Correcciones</h3>
+                <p>
+                    Revisa las solicitudes de modificación o cancelación
+                    de fichajes realizadas por los trabajadores.
+                </p>
+                <span class="card-link">Consultar guía →</span>
+            </a>
+
+            <a class="manual-card" href="incidencias.html"
+               data-search="incidencias errores jornadas incompletas revisión seguimiento">
+                <div class="card-icon">⚠️</div>
+                <span class="card-tag">SEGUIMIENTO</span>
+                <h3>Incidencias</h3>
+                <p>
+                    Consulta las incidencias relacionadas con el
+                    registro horario y realiza su seguimiento.
+                </p>
                 <span class="card-link">Consultar guía →</span>
             </a>
 
         </div>
-
-        <section class="notice">
-            <span>ℹ️</span>
-            <div>
-                <strong>¿Tienes dudas?</strong>
-                <p>Consulta con la persona responsable de Siscentro en tu empresa.</p>
-            </div>
-        </section>
-
     </section>
+
+    <section class="manual-section">
+        <div class="info-card">
+            <h3>¿Necesitas ayuda?</h3>
+            <p>
+                Si tienes dudas sobre el funcionamiento de Siscentro
+                o necesitas ayuda con alguna operación, contacta
+                con el equipo de soporte.
+            </p>
+        </div>
+    </section>
+
 </main>
 
-<footer>
-    <strong>SIScentro</strong>
-    <span>Centro de ayuda · Manual del administrador</span>
+<footer class="site-footer">
+    <p>Siscentro · Centro de ayuda</p>
 </footer>
 
 </body>
