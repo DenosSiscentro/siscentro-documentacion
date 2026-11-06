@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual de administración de Siscentro para empresas.">
     <title>Manual del administrador | Siscentro</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/app.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +20,7 @@
     <section class="hero">
         <span class="eyebrow">GESTIÓN DE EMPRESA</span>
         <h1>Manual del administrador</h1>
-        <p>Guía para gestionar el control horario y supervisar los fichajes de tu empresa.</p>
+        <p>Todo lo que necesitas saber para administrar tu empresa y supervisar el control horario de tus trabajadores.</p>
     </section>
 
     <section class="content">
@@ -26,73 +28,55 @@
         <p><a href="../index.html">← Volver al centro de ayuda</a></p>
 
         <div class="section-heading">
-            <h2>Contenido del manual</h2>
-            <p>Selecciona el apartado que deseas consultar.</p>
+            <h2>¿Qué necesitas hacer?</h2>
+            <p>Selecciona el apartado que quieras consultar.</p>
         </div>
 
-        <div class="manual-grid">
+        <div class="manual-grid" id="manualGrid">
 
-            <a href="panel-principal.html" class="manual-card">
+            <a class="manual-card"
+               href="panel-principal.html"
+               data-search="panel principal inicio verificación mensual indicadores actividad trabajadores fichajes horas incidencias">
+
                 <div class="card-icon">📊</div>
+
                 <span class="card-tag">INICIO</span>
+
                 <h3>Panel principal</h3>
-                <p>Verificación mensual, indicadores y resumen de actividad de la empresa.</p>
+
+                <p>
+                    Consulta los indicadores generales, la verificación
+                    mensual y la actividad diaria de tu empresa.
+                </p>
+
+                <span class="card-link">Consultar guía →</span>
             </a>
 
-            <a href="control-presencia.html" class="manual-card">
+            <a class="manual-card"
+               href="control-presencia.html"
+               data-search="control presencia fichajes jornadas calendario trabajadores entradas salidas nuevo fichaje modificar exportar">
+
                 <div class="card-icon">⏱️</div>
+
                 <span class="card-tag">CONTROL HORARIO</span>
+
                 <h3>Control de presencia</h3>
-                <p>Consulta mensual de jornadas, fichajes, incidencias y modificaciones.</p>
+
+                <p>
+                    Consulta las jornadas de los trabajadores,
+                    revisa sus fichajes y gestiona solicitudes de nuevos registros.
+                </p>
+
+                <span class="card-link">Consultar guía →</span>
             </a>
-
-            <article class="manual-card">
-                <div class="card-icon">🖥️</div>
-                <span class="card-tag">DISPOSITIVOS</span>
-                <h3>Terminales y dispositivos</h3>
-                <p>Gestión de los dispositivos utilizados para realizar fichajes.</p>
-                <span class="card-tag">EN PREPARACIÓN</span>
-            </article>
-
-            <article class="manual-card">
-                <div class="card-icon">👥</div>
-                <span class="card-tag">PERSONAL</span>
-                <h3>Trabajadores</h3>
-                <p>Gestión de trabajadores, cuentas y acceso a Siscentro.</p>
-                <span class="card-tag">EN PREPARACIÓN</span>
-            </article>
-
-            <article class="manual-card">
-                <div class="card-icon">⚠️</div>
-                <span class="card-tag">INCIDENCIAS</span>
-                <h3>Incidencias</h3>
-                <p>Consulta y gestión de incidencias relacionadas con las jornadas.</p>
-                <span class="card-tag">EN PREPARACIÓN</span>
-            </article>
-
-            <article class="manual-card">
-                <div class="card-icon">📝</div>
-                <span class="card-tag">CORRECCIONES</span>
-                <h3>Correcciones</h3>
-                <p>Revisión y gestión de solicitudes de modificación o anulación de fichajes.</p>
-                <span class="card-tag">EN PREPARACIÓN</span>
-            </article>
-
-            <article class="manual-card">
-                <div class="card-icon">⚙️</div>
-                <span class="card-tag">CONFIGURACIÓN</span>
-                <h3>Configuración</h3>
-                <p>Opciones de configuración y administración de la empresa.</p>
-                <span class="card-tag">EN PREPARACIÓN</span>
-            </article>
 
         </div>
 
         <section class="notice">
             <span>ℹ️</span>
             <div>
-                <strong>Manual en actualización</strong>
-                <p>Estamos ampliando la documentación para recoger todas las funcionalidades disponibles en Siscentro.</p>
+                <strong>¿Tienes dudas?</strong>
+                <p>Consulta con la persona responsable de Siscentro en tu empresa.</p>
             </div>
         </section>
 
